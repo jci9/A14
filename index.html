@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <style>
+	body{
+	font-family:sans-serif;
+	text-align:center;
+	background-color:#ffffff;
+	}
+	</style>
+		<title>A14</title>
+		<h1>Cookie Generator</h1>
+		<script>
+            function WriteCookie() {
+               if(document.myform.customer.value == "") {
+                 alert("Enter a value!");
+                 return;
+              }
+               cookievalue = escape(document.myform.customer.value) + ";";
+               document.cookie = "Your value is " + cookievalue;
+               document.write ("Setting Cookies: " + "Your value is " + cookievalue + "I remembered your input!" );
+            }
+
+    </script>
+   </head>
+
+   <body>
+      <form name = "myform" action="">
+         Enter a value: <input type = "text" name = "customer"/>
+         <input type = "button" value = "Set Cookie" onclick = "WriteCookie()"/>
+      </form>
+   </body>
+   <footer>
+    <p>&copy; Jersey Ibe, November 2019</p>
+  </footer>
+</html>
